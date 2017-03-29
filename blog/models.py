@@ -5,9 +5,10 @@ from django.utils import timezone
 
 
 class Post(models.Model):
-	author = models.ForeignKey('auth.User')
+	author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 	title = models.CharField(max_length=256, blank=True, null=True)
 	article = models.TextField(max_length=1500, blank=True, null=True)
+	feature_image = models.ImageField(upload_to='blog/', default='Images/None/No-img.jpg')
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
 

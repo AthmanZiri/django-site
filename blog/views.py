@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
 
-
 def post_list(request):
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 	return render(request, 'blog/post_list.html', {'posts': posts})
@@ -17,3 +16,13 @@ def post_detail(request, post_id):
         # If no Post has id post_id, we raise an HTTP 404 error.
         raise Http404
     return render(request, 'blog/post_detail.html', {'detail': detail})
+
+
+def portfolio(request):
+	h='hello people'
+	return render(request, 'blog/portfolio.html', {'h': h})
+
+
+def team(request):
+	h='hello people'
+	return render(request, 'blog/team.html', {'h': h})

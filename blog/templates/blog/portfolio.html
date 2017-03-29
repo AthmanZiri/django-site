@@ -1,0 +1,64 @@
+{% extends "./base.html" %}
+{% load staticfiles %}
+
+
+{% block navbar %}
+	{% include "./navbar.html" %}
+{% endblock %}
+
+{% block body %}
+	<section id="portfolio">
+	<div class="container">
+		<div class="section-header">
+			<h2 class="section-title text-center wow fadeInDown">Our Works</h2>
+			<p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+		</div>
+
+		<div class="portfolio-items">
+		<div class="portfolio-item creative">
+		<div class="portfolio-item-inner">
+		<img class="img-responsive" src=" {% static 'images/portfolio/01.jpg' %} " alt="">
+		<div class="portfolio-info">
+		<h3>Portfolio Item 1</h3>
+		Lorem Ipsum Dolor Sit
+		<a class="preview" href=" {% static 'images/portfolio/full.jpg' %} " rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+		</div>
+		</div>
+		</div> 
+
+		<div class="portfolio-item corporate portfolio">
+		<div class="portfolio-item-inner">
+		<img class="img-responsive" src=" {% static 'images/portfolio/02.jpg' %} " alt="">
+		<div class="portfolio-info">
+		<h3>Portfolio Item 2</h3>
+		Lorem Ipsum Dolor Sit
+		<a class="preview" href=" {% static 'images/portfolio/full.jpg' %} " rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+		</div>
+		</div>
+		</div> 
+
+		<div class="portfolio-item creative">
+		<div class="portfolio-item-inner">
+		<img class="img-responsive" src=" {% static 'images/portfolio/03.jpg' %} " alt="">
+		<div class="portfolio-info">
+		<h3>Portfolio Item 3</h3>
+		Lorem Ipsum Dolor Sit
+		<a class="preview" href=" {% static 'images/portfolio/full.jpg' %} " rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+		</div>
+		</div>
+		</div> 
+
+		<div class="portfolio-item corporate">
+		<div class="portfolio-item-inner">
+		<img class="img-responsive" src=" {% static 'images/portfolio/04.jpg' %} " alt="">
+		<div class="portfolio-info">
+		<h3>Portfolio Item 4</h3>
+		Lorem Ipsum Dolor Sit
+		<a class="preview" href=" {% static 'images/portfolio/full.jpg' %} " rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+		</div>
+		</div>
+		</div> 
+		</div>
+	</div> 
+</section> 
+{% endblock %}
