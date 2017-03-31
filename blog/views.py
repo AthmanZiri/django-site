@@ -16,13 +16,3 @@ def post_detail(request, post_id):
         # If no Post has id post_id, we raise an HTTP 404 error.
         raise Http404
     return render(request, 'blog/post_detail.html', {'detail': detail})
-
-
-def portfolio(request):
-	h='hello people'
-	return render(request, 'blog/portfolio.html', {'h': h})
-
-
-def team(request):
-	h='hello people'
-	return render(request, 'blog/team.html', {'h': h})

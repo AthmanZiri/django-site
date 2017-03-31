@@ -1,0 +1,78 @@
+{% extends "../base.html" %}
+{% load staticfiles %}
+
+
+{% block navbar %}
+	{% include "../navbar.html" %}
+{% endblock %}
+
+{% block body %}
+
+<section id="get-in-touch" style="background: #20222e url(../images/work-process/bg.jpg) no-repeat 0 0;">
+	<div class="container">
+	<div>
+		<div class="section-header">
+			<h2 class="section-title text-center wow fadeInDown">Get in Touch</h2>
+		</div>
+
+		<div class="col-sm-2"></div>
+
+		<div class="col-sm-8">
+		<div class="contact-form">
+			<form id="main-contact-form" name="contact-form" method="post" action="">
+			{% csrf_token %}
+
+<!-- 				<div class="col-sm-4">
+					<div class="form-group">
+						<input type="text" name="name" class="form-control" placeholder="Name" required>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="form-group">
+					{{ form.subject_email.errors }}
+						<input type="email" name="email" class="form-control" placeholder="Email" required value="{{ form.subject_email }}">
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="form-group">
+					{{ form.subject.errors }}
+						<input type="text" name="subject" class="form-control" placeholder="Subject" required value="{{ form.subject }}">
+					</div>
+				</div>
+
+				<div class="col-sm-12">	
+					<div class="form-group">
+					{{ form.message.errors }}
+						<textarea name="message" class="form-control" rows="8" placeholder="Message" required> {{ form.message }}</textarea>
+					</div>
+					<button type="submit" class="btn btn-primary">Send Message</button>
+				</div> -->
+
+				{% for field in form %}
+				<div class="col-sm-12">	
+				    <div >
+				        {{ field.errors }}
+				        <label> 
+				            {{ field.label_tag }}
+				        </label>
+				       <div >
+				           {{ field }}
+				       </div>
+				    </div>
+
+				</div>
+				{% endfor %}
+				<button type="submit" class="btn btn-primary">Send Message</button>
+			</form>
+		</div>
+		</div>
+
+		<div class="col-sm-2"></div>
+
+	</div>
+	</div>
+</section> 
+
+{% endblock %}
