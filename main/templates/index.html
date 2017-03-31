@@ -9,7 +9,7 @@
 
 {% block body %}
 <section id="main-slider">
-	<div class="item" style="background-image: url( {% static 'images/slider/bg1.jpg' %} ); height: 500px">
+	<div class="item" style="background-image: url( {% static 'images/slider/bg2.jpg' %} ); height: 500px">
 		<div class="slider-inner">
 			<div class="container">
 				<div class="row">
@@ -342,7 +342,6 @@
 
 		<div class="row">
 
-		{% for post in posts %}
 		<div class="col-sm-4">
 			<div class="blog-post blog-large wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="0ms">
 			<article>
@@ -352,14 +351,47 @@
 					</div>
 
 					<div class="entry-date">  </div>
-					<h2 class="entry-title"><a href="  ">
+					<h2 class="entry-title"><a href="  "> This is an example of article
 						 </a>
 					</h2>
 				</header>
 			</article>
 			</div>
-		</div> 
-		{% endfor %}
+		</div>
+
+		<div class="col-sm-4">
+			<div class="blog-post blog-large wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="0ms">
+			<article>
+				<header class="entry-header">
+					<div class="entry-thumbnail">
+						<img class="img-responsive" src=" {% static 'images/blog/01.jpg' %} " alt="">
+					</div>
+
+					<div class="entry-date">  </div>
+					<h2 class="entry-title"><a href="  "> This is an example of article
+						 </a>
+					</h2>
+				</header>
+			</article>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="blog-post blog-large wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="0ms">
+			<article>
+				<header class="entry-header">
+					<div class="entry-thumbnail">
+						<img class="img-responsive" src=" {% static 'images/blog/01.jpg' %} " alt="">
+					</div>
+
+					<div class="entry-date">  </div>
+					<h2 class="entry-title"><a href="  "> This is an example of article
+						 </a>
+					</h2>
+				</header>
+			</article>
+			</div>
+		</div>
 
 		</div> 
 
