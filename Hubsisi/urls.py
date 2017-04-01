@@ -22,15 +22,15 @@ from django.contrib import admin
 from main import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin', admin.site.urls),
     
     url(r'^blog/', include('blog.urls')),
 
-    url(r'^contact/', include('send_email.urls')),
+    url(r'^contact$', include('send_email.urls')),
 
-    url(r'^portfolio/', include('portfolio.urls')),
+    url(r'^portfolio$', include('portfolio.urls')),
 
-    url(r'^team/$', views.team, name='team'),
+    url(r'^team$', views.team, name='team'),
 
     url(r'^', views.index, name='index'),
 
