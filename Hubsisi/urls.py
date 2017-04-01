@@ -26,7 +26,7 @@ urlpatterns = [
     
     url(r'^blog/', include('blog.urls')),
 
-    url(r'^email/', include('send_email.urls')),
+    url(r'^contact/', include('send_email.urls')),
 
     url(r'^portfolio/', include('portfolio.urls')),
 
