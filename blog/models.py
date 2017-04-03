@@ -8,6 +8,7 @@ class Post(models.Model):
 	author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 	title = models.CharField(max_length=256, blank=True, null=True)
 	article = models.TextField(max_length=1500, blank=True, null=True)
+	# slug = models.OneToOneField(self.article, max_length=20)
 	feature_image = models.ImageField(upload_to='blog/', default='Images/None/No-img.jpg')
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
