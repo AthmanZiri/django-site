@@ -1,69 +1,86 @@
-{% extends "../base.html" %}
+{% extends "../page/base.html" %}
 {% load staticfiles %}
 
-					
-{% block navbar %}
-	{% include "../navbar.html" %}
+{% block heading %}
+    Our Portfolio
 {% endblock %}
 
+
 {% block body %}
+    	<!-- Portfolio Grid Section -->
+        <section id="portfolio" class="bg-light-gray">
+            <div class="container">                
+                <div class="row">
 
-<section id="work-process">
-	<div class="container" style="height: 70px">
-		<div class="section-header">
-			<h2 class="section-title text-center wow fadeInDown">Our Works</h2>
-		</div>
-	</div>
-</section> 
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-	<section id="portfolio">
-	<div class="container">
+                    <div class="col-md-6 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Round Icons</h4>
+                            <p class="text-muted">Graphic Design</p>
+                        </div>
+                    </div>
 
-		<div class="portfolio-items">
-		<div class="portfolio-item creative">
-		<div class="portfolio-item-inner">
-		<img class="img-responsive" src=" {% static 'images/portfolio/01.jpg' %} " alt="">
-		<div class="portfolio-info">
-		<h3>Portfolio Item 1</h3>
-		Lorem Ipsum Dolor Sit
-		<a class="preview" href=" {% static 'images/portfolio/full.jpg' %} " rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-		</div>
-		</div>
-		</div> 
+                    <div class="col-md-6 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Startup Framework</h4>
+                            <p class="text-muted">Website Design</p>
+                        </div>
+                    </div>
+                    
+                </div>    
+                </div>
+            </div>
+        </section>
 
-		<div class="portfolio-item corporate portfolio">
-		<div class="portfolio-item-inner">
-		<img class="img-responsive" src=" {% static 'images/portfolio/02.jpg' %} " alt="">
-		<div class="portfolio-info">
-		<h3>Portfolio Item 2</h3>
-		Lorem Ipsum Dolor Sit
-		<a class="preview" href=" {% static 'images/portfolio/full.jpg' %} " rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-		</div>
-		</div>
-		</div> 
+<!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                            <div class="modal-body" >
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <p>
+                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                                <ul class="list-inline">
+                                    <li>Date: July 2014</li>
+                                    <li>Client: Round Icons</li>
+                                    <li>Category: Graphic Design</li>
+                                </ul>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		<div class="portfolio-item creative">
-		<div class="portfolio-item-inner">
-		<img class="img-responsive" src=" {% static 'images/portfolio/03.jpg' %} " alt="">
-		<div class="portfolio-info">
-		<h3>Portfolio Item 3</h3>
-		Lorem Ipsum Dolor Sit
-		<a class="preview" href=" {% static 'images/portfolio/full.jpg' %} " rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-		</div>
-		</div>
-		</div> 
 
-		<div class="portfolio-item corporate">
-		<div class="portfolio-item-inner">
-		<img class="img-responsive" src=" {% static 'images/portfolio/04.jpg' %} " alt="">
-		<div class="portfolio-info">
-		<h3>Portfolio Item 4</h3>
-		Lorem Ipsum Dolor Sit
-		<a class="preview" href=" {% static 'images/portfolio/full.jpg' %} " rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-		</div>
-		</div>
-		</div> 
-		</div>
-	</div> 
-</section> 
 {% endblock %}
